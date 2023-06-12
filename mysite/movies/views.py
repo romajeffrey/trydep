@@ -15,8 +15,7 @@ def index(request):
     return render(request, 'movies/index.html', {'movies': movies})
 
 
-
 def detail(request, movie_id):
 
     movie = get_object_or_404(Movie, pk=movie_id)
-    return render(request, 'detail.html', {'movie': movie})
+    return render(request, 'movies/detail.html', {'movie': movie})
