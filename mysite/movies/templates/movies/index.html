@@ -16,8 +16,8 @@
             
             <tr>
                 <td>
-                    {% comment %} <a href="{% url 'movies:detail' movie.id%}">{{ movie.name }}</a> {% endcomment %}
-                    <a href="/movies/{{ movie.id }}"> {{ movie.name }}</a>
+                    <a href="{% url 'movies:detail' movie.id%}">{{ movie.name }}</a>
+                    {% comment %} <a href="/movies/{{ movie.id }}"> {{ movie.name }}</a> {% endcomment %}
                     {% comment %} {{ movie.name }} {% endcomment %}
                     </td>
                 <td>{{ movie.genre }}</td>
