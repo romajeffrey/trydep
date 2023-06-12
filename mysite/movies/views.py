@@ -8,7 +8,9 @@ from .models import Movie
 
 def index(request):
     movies = Movie.objects.all()
-    output = ', '.join([m.name for m in movies])
+    # output = ', '.join([m.name for m in movies])
         # return render(request, 'index.html', {'movies': movies})
     # return HttpResponse("Hello word")
-    return HttpResponse(output)
+    # return HttpResponse(output)
+    return render(request, 'movies/index.html', {'movies': movies})
+

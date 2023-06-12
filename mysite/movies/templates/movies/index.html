@@ -1,7 +1,6 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
 
-{% block content %}
-    {% comment %} table.table>thead>tr>th*3 {% endcomment %}
+{% block content %} {% endcomment %}
             
     <table class="table table-bordered table-hover">
         <thead>
@@ -12,19 +11,19 @@
                 <th>Daily Rate</th>
             </tr>
         </thead>
-        <!-- tbody>tr>td*4 -->
         <tbody>
             {% for movie in movies %}
             
             <tr>
                 <td>
-                    <a href="{% url 'movies:detail' movie.id%}">{{ movie.name }}</a>
+                    {% comment %} <a href="{% url 'movies:detail' movie.id%}">{{ movie.name }}</a> {% endcomment %}
+                    {{ movie.name }}
                     </td>
                 <td>{{ movie.genre }}</td>
                 <td>{{ movie.number_in_stock }}</td>
                 <td>{{ movie.daily_rate }}</td> 
             </tr>
             {% endfor %}
-        </tbody>
+        </tbody> 
     </table>
-{% endblock %}
+{% comment %} {% endblock %} {% endcomment %}
