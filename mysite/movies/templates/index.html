@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% comment %} table.table>thead>tr>th*3 {% endcomment %}
+            
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Stock</th>
+                <th>Daily Rate</th>
+            </tr>
+        </thead>
+        <!-- tbody>tr>td*4 -->
+        <tbody>
+            {% for movie in movies %}
+            
+            <tr>
+                <td>
+                    <a href="{% url 'movies:detail' movie.id%}">{{ movie.name }}</a>
+                    </td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.number_in_stock }}</td>
+                <td>{{ movie.daily_rate }}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

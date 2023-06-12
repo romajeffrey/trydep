@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- dl>(dt+dd)*3 -->
+    <dl>
+        <dt>Name</dt>
+        <dd>{{ movie.name}}</dd>
+        <dt>Genre</dt>
+        <dd>{{movie.genre}}</dd>
+        <dt>Stock</dt>
+        <dd>{{movie.number_in_stock}}</dd>
+    </dl>
+{% endblock  %} 
+
